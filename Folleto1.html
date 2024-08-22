@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/img/Logotipo_MiTeleferico.png" type="image/x-icon">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #fefefe;
+            padding-top: 100px;
+        }
+        
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #00529B;
+            color: #fff;
+            padding: 15px 20px;
+            box-shadow: 0 4px 8px rgba(14, 13, 13, 0.3);
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-container img {
+            height: 60px;
+            width: auto;
+            margin-right: 15px;
+        }
+        
+        header h1 {
+            font-size: 28px;
+        }
+        
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        
+        header nav ul li a:hover {
+            color: #0a4c80;
+        }
+        
+
+        .informacion-lineas {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 900px;
+            width: 100%;
+        }
+
+        .informacion-lineas h2 {
+            color: #4a90e2;
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .linea {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #fafafa;
+        }
+
+        .linea img {
+            max-width: 350px;
+            border-radius: 10px;
+            margin-right: 20px;
+            object-fit: cover;
+        }
+
+        .linea h3 {
+            color: #e94e77;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .linea p {
+            font-size: 1em;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+        }
+
+        .linea strong {
+            color: #4a90e2;
+            font-weight: bold;
+        }
+
+        .linea em {
+            color: #777;
+
+        }
+        .Mapa {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 900px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .Mapa h1 {
+            color: #000000;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .Mapa img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        footer {
+            background-color: #032338;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            position: relative;
+            bottom: 0;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-section {
+            margin-bottom: 20px;
+        }
+        
+        .footer-section h3 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .footer-section p {
+            margin: 5px 0;
+        }
+        
+        .footer-section.social ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .footer-section.social ul li {
+            margin: 0 10px;
+        }
+        
+        .social-icon {
+            width: 30px;
+            height: 30px;
+        }
+        
+        footer p {
+            margin-bottom: 10px;
+        }
+        
+        footer ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        footer ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        
+        footer ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        
+        footer ul li a:hover {
+            color: #0a4c80;
+        }
+        
+    </style>
+    <header>
+        <div class="logo-container">
+            <li><a href="/index.html"><img src="img/Logotipo_MiTeleferico.png" alt="icono" ></a></li>
+            <h1>Mi Teleférico</h1>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="/Folleto1.html">Folleto 1</a></li>
+                <li><a href="/folleto2.html">Folleto 2</a></li>
+                <li><a href="/folleto3.html">Folleto 3</a></li>
+                <li><a href="/folleto4.html">Folleto 4</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="Mapa">
+        <h1>Mapa de los puntos</h1>
+        <img src="/img/map.png" alt="mapa">
+    </section>
+    <section class="informacion-lineas">
+        <h2>Información de las Líneas de Mi Teleférico</h2>
+
+        <div class="linea">
+            <img src="/colores/rojo.jpg" alt="Línea Roja">
+            <div>
+                <h3>Línea Roja</h3>
+                <p><strong>Recorrido:</strong> Desde la estación de <em>El Alto</em> hasta <em>Plaza España</em>.</p>
+                <p><strong>Estaciones Principales:</strong> El Alto, La Paz (Zona 12 de Octubre), Plaza España.</p>
+                <p><strong>Tiempo de Viaje:</strong> Aproximadamente 10 minutos.</p>
+                <p><strong>Descripción:</strong> La Línea Roja ofrece vistas panorámicas espectaculares de la ciudad y une importantes centros comerciales y residenciales.</p>
+            </div>
+        </div>
+
+        <div class="linea">
+            <img src="/colores/amarillo.jpg" alt="Línea Amarilla">
+            <div>
+                <h3>Línea Amarilla</h3>
+                <p><strong>Recorrido:</strong> Desde <em>San Jorge</em> hasta <em>Irpavi</em>.</p>
+                <p><strong>Estaciones Principales:</strong> San Jorge, Sopocachi, Miraflores, Irpavi.</p>
+                <p><strong>Tiempo de Viaje:</strong> Aproximadamente 15 minutos.</p>
+                <p><strong>Descripción:</strong> La Línea Amarilla conecta áreas residenciales y comerciales importantes, ofreciendo vistas panorámicas de las montañas circundantes.</p>
+            </div>
+        </div>
+
+        <div class="linea">
+            <img src="/colores/verde.jpg" alt="Línea Verde">
+            <div>
+                <h3>Línea Verde</h3>
+                <p><strong>Recorrido:</strong> Desde <em>Ciudad Satélite</em> hasta <em>La Paz (Avenida Simón Bolívar)</em>.</p>
+                <p><strong>Estaciones Principales:</strong> Ciudad Satélite, Villa Fátima, La Paz (Avenida Simón Bolívar).</p>
+                <p><strong>Tiempo de Viaje:</strong> Aproximadamente 12 minutos.</p>
+                <p><strong>Descripción:</strong> La Línea Verde conecta zonas periféricas con el centro de la ciudad, brindando una vista única de la topografía urbana.</p>
+            </div>
+        </div>
+
+        <div class="linea">
+            <img src="/colores/teleferico-naranja.webp" alt="Línea Naranja">
+            <div>
+                <h3>Línea Naranja</h3>
+                <p><strong>Recorrido:</strong> Desde <em>Obrajes</em> hasta <em>La Paz (Zona Sur)</em>.</p>
+                <p><strong>Estaciones Principales:</strong> Obrajes, La Paz (Zona Sur).</p>
+                <p><strong>Tiempo de Viaje:</strong> Aproximadamente 8 minutos.</p>
+                <p><strong>Descripción:</strong> La Línea Naranja atraviesa zonas residenciales y ofrece vistas encantadoras del entorno natural.</p>
+            </div>
+        </div>
+
+        <div class="linea">
+            <img src="/colores/blanco.jpg" alt="Línea Blanca">
+            <div>
+                <h3>Línea Blanca</h3>
+                <p><strong>Recorrido:</strong> Desde <em>Miraflores</em> hasta <em>Centro de La Paz</em>.</p>
+                <p><strong>Estaciones Principales:</strong> Miraflores, Centro de La Paz.</p>
+                <p><strong>Tiempo de Viaje:</strong> Aproximadamente 10 minutos.</p>
+                <p><strong>Descripción:</strong> La Línea Blanca ofrece una conexión rápida entre importantes áreas del centro y zonas residenciales.</p>
+            </div>
+        </div>
+
+        <div class="linea">
+            <img src="/colores/azul.jpeg" alt="Línea Azul">
+            <div>
+                <h3>Línea Azul</h3>
+                <p><strong>Recorrido:</strong> Desde <em>Zona 16 de Julio</em> hasta <em>La Paz (Centro Histórico)</em>.</p>
+                <p><strong>Estaciones Principales:</strong> Zona 16 de Julio, La Paz (Centro Histórico).</p>
+                <p><strong>Tiempo de Viaje:</strong> Aproximadamente 14 minutos.</p>
+                <p><strong>Descripción:</strong> La Línea Azul conecta áreas históricas y culturales de La Paz, ideal para explorar la ciudad.</p>
+            </div>
+        </div>
+
+        <div class="linea">
+            <img src="/colores/cafe.png" alt="Línea Café">
+            <div>
+                <h3>Línea Café</h3>
+                <p><strong>Recorrido:</strong> Desde <em>Zona Norte</em> hasta <em>La Paz (Zona Central)</em>.</p>
+                <p><strong>Estaciones Principales:</strong> Zona Norte, La Paz (Zona Central).</p>
+                <p><strong>Tiempo de Viaje:</strong> Aproximadamente 13 minutos.</p>
+                <p><strong>Descripción:</strong> La Línea Café ofrece una vista panorámica del área norte de la ciudad y conecta con zonas clave.</p>
+            </div>
+        </div>
+
+    </section>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section contact">
+                <h3>Contacto</h3>
+                <p>Email: laPaz@miteleferico.com</p>
+                <p>Teléfono: +591 62295637</p>
+            </div>
+            <div class="footer-section social">
+                <h3>Síguenos</h3>
+                <ul>
+                    <li><a href="https://www.facebook.com/profile.php?id=100006948167897"><img src="img/facebook.png" alt="Facebook" class="social-icon"></a></li>
+                    <li><a href="https://www.instagram.com/sergi0_tm/"><img src="img/instagram.png" alt="Instagram" class="social-icon"></a></li>
+                    <li><a href="https://wa.me/62295637"><img src="img/social.png" alt="WhatsApp" class="social-icon"></a></li>
+                    <li><a href="https://www.tiktok.com/@sergiot.m"><img src="img/tik-tok (1).png" alt="TikTok" class="social-icon"></a></li>
+                </ul>
+            </div>
+            <p>&copy; 2024 Mi Teleférico. Todos los derechos reservados.</p>
+            <ul>
+                <li><a href="#">Política de privacidad</a></li>
+                <li><a href="#">Términos y condiciones</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
